@@ -30,14 +30,18 @@ namespace HttpWebServer
                 sw.AutoFlush = true; // enable automatic flushing
 
                 string message = sr.ReadLine();
-                string answer="Hey Static Message";
+                //string answer="Hey Static Message";
                 //while (message != null && message != "")
                 {
                     //Console.WriteLine("Client: " + message);
 
-
+                    string[] words = message.Split(' ');
+                    foreach (string word  in words)
+                    {
+                        Console.WriteLine(word);
+                    }
                    
-                    sw.WriteLine(answer);
+                    sw.WriteLine(words[1]);
                     message = sr.ReadLine();
                     
 
