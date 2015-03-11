@@ -1,0 +1,6 @@
+c:\users\asis\documents\visual studio 2013\Projects\HttpWebServer\HttpWebServer\bin\Debug\HttpWebServer.exe.config
+c:\users\asis\documents\visual studio 2013\Projects\HttpWebServer\HttpWebServer\bin\Debug\HttpWebServer.exe
+c:\users\asis\documents\visual studio 2013\Projects\HttpWebServer\HttpWebServer\bin\Debug\HttpWebServer.pdb
+c:\users\asis\documents\visual studio 2013\Projects\HttpWebServer\HttpWebServer\obj\Debug\HttpWebServer.csprojResolveAssemblyReference.cache
+c:\users\asis\documents\visual studio 2013\Projects\HttpWebServer\HttpWebServer\obj\Debug\HttpWebServer.exe
+c:\users\asis\documents\visual studio 2013\Projects\HttpWebServer\HttpWebServer\obj\Debug\HttpWebServer.pdb
