@@ -12,6 +12,7 @@ namespace HttpWebServer
     class Server
     {
         private TcpClient connectionSocket;
+       // Setting The Location For File Source
         private static readonly string RootCatalog = @"c:/temp";
 
         public Server(TcpClient connectionSocket)
@@ -37,8 +38,9 @@ namespace HttpWebServer
                 //while (message != null && message != "")
                 {
                     //Console.WriteLine("Client: " + message);
-
+// Splitting The Readline by space
                     string[] words = message.Split(' ');
+                    
                     foreach (string word  in words)
                     {
                         Console.WriteLine(word);
@@ -46,7 +48,9 @@ namespace HttpWebServer
                    
                     //sw.WriteLine(words[1]);
                     //message = sr.ReadLine();
+                 
                     string PathCheck = RootCatalog + words[1];
+                    // checking the file location
                     if (!File.Exists(PathCheck))
                     {
                         sw.WriteLine("Http/1.0 404 Not Found\r\n\r\n");

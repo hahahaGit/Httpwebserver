@@ -10,3 +10,6 @@ C:\Users\Manish\Documents\GitHub\Httpwebserver\HttpWebServer\obj\Debug\HttpWebSe
 C:\Users\Manish\Documents\GitHub\Httpwebserver\HttpWebServer\bin\Debug\HttpWebServer.exe
 C:\Users\Manish\Documents\GitHub\Httpwebserver\HttpWebServer\bin\Debug\HttpWebServer.pdb
 C:\Users\Manish\Documents\GitHub\Httpwebserver\HttpWebServer\obj\Debug\HttpWebServer.csprojResolveAssemblyReference.cache
+C:\Users\Asis\Documents\GitHub\Httpwebserver\HttpWebServer\bin\Debug\HttpWebServer.exe.config
+C:\Users\Asis\Documents\GitHub\Httpwebserver\HttpWebServer\obj\Debug\HttpWebServer.exe
+C:\Users\Asis\Documents\GitHub\Httpwebserver\HttpWebServer\obj\Debug\HttpWebServer.pdb
