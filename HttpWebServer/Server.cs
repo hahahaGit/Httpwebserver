@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace HttpWebServer
     class Server
     {
         private TcpClient connectionSocket;
+        private static readonly string RootCatalog = @"c:/temp";
 
         public Server(TcpClient connectionSocket)
         {
@@ -30,6 +32,7 @@ namespace HttpWebServer
                 sw.AutoFlush = true; // enable automatic flushing
 
                 string message = sr.ReadLine();
+                string answer;
                 //string answer="Hey Static Message";
                 //while (message != null && message != "")
                 {
@@ -41,9 +44,28 @@ namespace HttpWebServer
                         Console.WriteLine(word);
                     }
                    
-                    sw.WriteLine(words[1]);
-                    message = sr.ReadLine();
-                    
+                    //sw.WriteLine(words[1]);
+                    //message = sr.ReadLine();
+                    string PathCheck = RootCatalog + words[1];
+                    if (!File.Exists(PathCheck))
+                    {
+                        sw.WriteLine("Http/1.0 404 Not Found\r\n\r\n");
+                        message = sr.ReadLine();
+                    }
+                    else
+                    {
+                        answer = "Http/1.0 200 OK\r\n\r\n";
+                        sw.WriteLine(answer);
+                        message = sr.ReadLine();
+                        using (FileStream source = File.Open(PathCheck, FileMode.Open, FileAccess.Read))
+                        {
+                            source.CopyTo(sw.BaseStream);
+                            source.Flush();
+                            source.Close();
+
+                        }
+                        Console.WriteLine(message);
+                    }
 
 
                 }
